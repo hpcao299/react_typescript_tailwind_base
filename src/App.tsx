@@ -1,26 +1,14 @@
-import './App.css';
-import logo from './logo.svg';
+import React from 'react';
+import GlobalStyles from '~/components/GlobalStyles';
 
-function App() {
+const App: React.FC = () => {
     return (
-        <div className="App">
-            <h1 className="text-center text-red-300">Hi World!</h1>
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div className="app font-chatverse">
+            <GlobalStyles>
+                <h1 className="text-2xl text-center text-red-300">Hi World!</h1>
+            </GlobalStyles>
         </div>
     );
-}
+};
 
 export default App;
