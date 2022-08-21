@@ -3,15 +3,6 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
         extend: {},
-        fontFamily: {
-            chatverse: [
-                'system-ui',
-                '-apple-system',
-                'system-ui',
-                '.SFNSText-Regular',
-                'sans-serif',
-            ],
-        },
     },
     plugins: [],
 };

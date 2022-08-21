@@ -1,11 +1,19 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import GlobalStyles from '~/components/GlobalStyles';
+import { publicRoutes } from './routes';
 
 const App: React.FC = () => {
     return (
-        <div className="app font-chatverse">
+        <div className="app">
             <GlobalStyles>
-                <h1 className="text-2xl text-center text-red-300">Hi World!</h1>
+                <Routes>
+                    {publicRoutes.map((route, index) => {
+                        const Page = route.component;
+
+                        return <Route key={index} path={route.path} element={<Page />} />;
+                    })}
+                </Routes>
             </GlobalStyles>
         </div>
     );
